@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Master DevOps & AWS with Velocity9's comprehensive courses. Get certified, build real projects, and land your dream job with our career support. Enroll now at ₹2,999.">
+    <meta name="keywords" content="DevOps course, AWS training, cloud computing, DevOps certification, AWS certification, online IT courses, career transformation, Velocity9">
+    <meta name="author" content="Velocity9">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Velocity9 | DevOps & AWS Mastery Courses">
+    <meta property="og:description" content="Master DevOps & AWS with comprehensive courses. Get certified, build real projects, and land your dream job. Enroll now at ₹2,999.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://velocity9.com">
+    <meta property="og:image" content="https://velocity9.com/images/og-image.jpg">
+    <meta property="og:site_name" content="Velocity9">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Velocity9 | DevOps & AWS Mastery Courses">
+    <meta name="twitter:description" content="Master DevOps & AWS with comprehensive courses. Get certified, build real projects, and land your dream job.">
+    <meta name="twitter:image" content="https://velocity9.com/images/twitter-card.jpg">
+    <meta name="twitter:site" content="@velocity9">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://velocity9.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Velocity9",
+        "description": "Velocity9 provides comprehensive DevOps and AWS training courses with career support and placement assistance.",
+        "url": "https://velocity9.com",
+        "logo": "https://velocity9.com/images/logo.png",
+        "sameAs": [
+            "https://www.facebook.com/velocity9",
+            "https://www.linkedin.com/company/velocity9",
+            "https://twitter.com/velocity9"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-XXXXXXXXXX",
+            "contactType": "customer service",
+            "email": "support@velocity9.com",
+            "areaServed": "IN",
+            "availableLanguage": ["English", "Hindi"]
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Complete DevOps Engineer Mastery",
+        "description": "Master CI/CD, Docker, Kubernetes, Terraform, Jenkins, and more to become a DevOps expert. Build automated infrastructure and deployment pipelines.",
+        "provider": {
+            "@type": "Organization",
+            "name": "Velocity9",
+            "sameAs": "https://velocity9.com"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "2999",
+            "priceCurrency": "INR"
+        },
+        "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseMode": "online",
+            "courseWorkload": "P80H"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "AWS Solutions Architect & DevOps",
+        "description": "Master AWS services, architecture patterns, and combine with DevOps practices for automated, scalable cloud infrastructure.",
+        "provider": {
+            "@type": "Organization",
+            "name": "Velocity9",
+            "sameAs": "https://velocity9.com"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "2999",
+            "priceCurrency": "INR"
+        },
+        "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseMode": "online",
+            "courseWorkload": "P90H"
+        }
+    }
+    </script>
+
+    <title>Velocity9 | DevOps & AWS Mastery Courses - Get Certified & Land Your Dream Job</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563EB',
+                        secondary: '#1E40AF',
+                        accent: '#DC2626',
+                        light: '#F8FAFC',
+                        dark: '#1E293B',
+                        gray1: '#F1F5F9',
+                        gray2: '#E2E8F0',
+                        gray3: '#CBD5E1',
+                        gray4: '#94A3B8',
+                        gray5: '#64748B',
+                        gray6: '#475569'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'pulse-slow': 'pulse 3s infinite'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
+        }
+        .accent-gradient {
+            background: linear-gradient(135deg, #DC2626, #B91C1C);
+        }
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #E2E8F0, transparent);
+        }
+        .course-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #E2E8F0;
+        }
+        .course-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .feature-icon {
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1);
+        }
+        .pricing-card {
+            transition: all 0.3s ease;
+            border: 1px solid #E2E8F0;
+        }
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+        }
+        .stats-card {
+            background: linear-gradient(135deg, #2563EB, #1E40AF);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #2563EB;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .curriculum-item {
+            position: relative;
+            padding-left: 2rem;
+        }
+        .curriculum-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #2563EB;
+        }
+        /* Improve accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</head>
+<body class="bg-light text-dark font-inter">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white p-2 z-50 rounded">Skip to main content</a>
+
+    <!-- Header/Navigation -->
+    <header role="banner" class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray2 shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-lg" aria-label="Velocity9 Logo">V9</div>
+                <span class="ml-3 text-xl font-bold text-primary">Velocity9</span>
+            </div>
+            <nav role="navigation" aria-label="Main navigation">
+                <ul class="hidden md:flex space-x-10">
+                    <li><a href="#home" class="nav-link font-medium transition-all duration-300 text-gray6 hover:text-primary">Home</a></li>
+                    <li><a href="#courses" class="nav-link font-medium transition-all duration-300 text-gray6 hover:text-primary">Courses</a></li>
+                    <li><a href="#features" class="nav-link font-medium transition-all duration-300 text-gray6 hover:text-primary">Features</a></li>
+                    <li><a href="#curriculum" class="nav-link font-medium transition-all duration-300 text-gray6 hover:text-primary">Curriculum</a></li>
+                    <li><a href="#pricing" class="nav-link font-medium transition-all duration-300 text-gray6 hover:text-primary">Pricing</a></li>
+                </ul>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button class="px-5 py-2 rounded-lg font-medium text-gray6 hover:text-primary transition">Login</button>
+                <button class="px-5 py-2 bg-primary text-white rounded-lg font-medium hover:bg-secondary transition">Enroll Now</button>
+                <button class="md:hidden text-xl text-gray6" aria-label="Mobile menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white py-20 md:py-28 relative overflow-hidden" role="banner">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full animate-pulse-slow"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full animate-pulse-slow"></div>
+        </div>
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center relative z-10">
+            <div class="md:w-1/2 mb-12 md:mb-0 animate-fade-in">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Master <span class="bg-white/20 px-2 rounded-lg">DevOps</span> & <span class="bg-white/20 px-2 rounded-lg">AWS</span> with Industry Experts</h1>
+                <p class="text-xl mb-8 max-w-2xl text-blue-100">Transform your career with our intensive DevOps & AWS program. Get certified, build real-world projects, and land your dream job with our comprehensive career support.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button class="px-8 py-4 bg-white text-primary font-bold rounded-lg hover:shadow-2xl transition flex items-center justify-center">
+                        <i class="fas fa-play-circle mr-2" aria-hidden="true"></i> Watch Course Demo
+                    </button>
+                    <button class="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-primary transition">Download Syllabus</button>
+                </div>
+                <div class="mt-10 flex flex-wrap items-center gap-6">
+                    <div class="flex items-center">
+                        <div class="flex -space-x-3">
+                            <div class="w-10 h-10 rounded-full border-2 border-white bg-accent flex items-center justify-center text-white text-xs font-bold" aria-hidden="true">AB</div>
+                            <div class="w-10 h-10 rounded-full border-2 border-white bg-blue-300 flex items-center justify-center text-white text-xs font-bold" aria-hidden="true">CD</div>
+                            <div class="w-10 h-10 rounded-full border-2 border-white bg-blue-400 flex items-center justify-center text-white text-xs font-bold" aria-hidden="true">EF</div>
+                        </div>
+                        <p class="ml-4 font-medium">Join <span class="font-bold">2,500+</span> successful students</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-medal text-yellow-300" aria-hidden="true"></i>
+                        </div>
+                        <p class="ml-3 font-medium">94% <span class="font-light text-blue-100">Placement Rate</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center animate-slide-up">
+                <div class="relative w-full max-w-lg">
+                    <div class="relative z-10 rounded-xl overflow-hidden shadow-2xl border-4 border-white/30">
+                        <div class="h-80 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                            <div class="text-center p-8">
+                                <i class="fas fa-cloud text-6xl mb-4 text-white" aria-hidden="true"></i>
+                                <h2 class="text-2xl font-bold mb-2 text-white">DevOps & AWS Mastery</h2>
+                                <p class="text-blue-100">Complete career transformation program</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg border border-gray2">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 accent-gradient rounded-lg flex items-center justify-center text-white">
+                                <i class="fas fa-gem" aria-hidden="true"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="font-bold">Premium Course</p>
+                                <p class="text-sm text-gray5">All-inclusive package</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-white" aria-labelledby="stats-heading">
+        <div class="container mx-auto px-4">
+            <h2 id="stats-heading" class="sr-only">Our Achievements</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="stats-card text-white p-6 rounded-xl text-center shadow-lg">
+                    <p class="text-3xl md:text-4xl font-bold">2,500+</p>
+                    <p class="text-blue-100">Students Enrolled</p>
+                </div>
+                <div class="stats-card text-white p-6 rounded-xl text-center shadow-lg">
+                    <p class="text-3xl md:text-4xl font-bold">94%</p>
+                    <p class="text-blue-100">Placement Rate</p>
+                </div>
+                <div class="stats-card text-white p-6 rounded-xl text-center shadow-lg">
+                    <p class="text-3xl md:text-4xl font-bold">300+</p>
+                    <p class="text-blue-100">Hiring Partners</p>
+                </div>
+                <div class="stats-card text-white p-6 rounded-xl text-center shadow-lg">
+                    <p class="text-3xl md:text-4xl font-bold">15+</p>
+                    <p class="text-blue-100">Real Projects</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Courses Section -->
+    <main id="main-content" role="main">
+        <section id="courses" class="py-20 bg-light" aria-labelledby="courses-heading">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 id="courses-heading" class="text-3xl md:text-5xl font-bold mb-4 text-dark">Our Premium Courses</h2>
+                    <p class="text-xl max-w-3xl mx-auto text-gray5">Comprehensive programs designed to take you from beginner to expert with hands-on projects and career support.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
+                    <!-- DevOps Course -->
+                    <article class="course-card bg-white rounded-xl overflow-hidden" itemscope itemtype="https://schema.org/Course">
+                        <div class="h-48 bg-gradient-to-r from-blue-500 to-blue-700 flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <span class="text-white text-3xl font-bold relative z-10" itemprop="name">DevOps Engineering</span>
+                            <div class="absolute top-4 right-4 bg-white/20 text-white px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm">Most Popular</div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex justify-between items-center mb-6">
+                                <span class="px-4 py-1.5 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Complete Program</span>
+                                <div class="text-right">
+                                    <span class="text-3xl font-bold text-primary" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                        <meta itemprop="priceCurrency" content="INR">
+                                        <span itemprop="price">₹2,999</span>
+                                    </span>
+                                    <p class="text-gray5 text-sm">One-time payment</p>
+                                </div>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 text-dark" itemprop="name">Complete DevOps Engineer Mastery</h3>
+                            <p class="text-gray5 mb-6" itemprop="description">Master CI/CD, Docker, Kubernetes, Terraform, Jenkins, and more to become a DevOps expert. Build automated infrastructure and deployment pipelines.</p>
+                            
+                            <div class="mb-6">
+                                <h4 class="font-bold mb-3 text-lg text-dark">What's Included:</h4>
+                                <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>
+                                        <span class="text-gray6">100+ Hours Video Content</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>
+                                        <span class="text-gray6">Comprehensive Notes</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>
+                                        <span class="text-gray6">12+ Real Projects</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>
+                                        <span class="text-gray6">Resume Building</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>
+                                        <span class="text-gray6">Placement Guide</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>
+                                        <span class="text-gray6">Interview Preparation</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="flex justify-between text-sm text-gray4 mb-6">
+                                <span><i class="fas fa-clock mr-1" aria-hidden="true"></i> 80+ hours</span>
+                                <span><i class="fas fa-video mr-1" aria-hidden="true"></i> 25 modules</span>
+                                <span><i class="fas fa-tasks mr-1" aria-hidden="true"></i> 12 Projects</span>
+                            </div>
+                            <button class="w-full py-3.5 bg-primary text-white rounded-lg font-bold hover:bg-secondary transition">Enroll in DevOps Course</button>
+                        </div>
+                    </article>
+                    
+                    <!-- AWS Course -->
+                    <article class="course-card bg-white rounded-xl overflow-hidden" itemscope itemtype="https://schema.org/Course">
+                        <div class="h-48 bg-gradient-to-r from-blue-600 to-blue-800 flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <span class="text-white text-3xl font-bold relative z-10" itemprop="name">AWS Cloud Mastery</span>
+                            <div class="absolute top-4 right-4 bg-white/20 text-white px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm">High Demand</div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex justify-between items-center mb-6">
+                                <span class="px-4 py-1.5 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Complete Program</span>
+                                <div class="text-right">
+                                    <span class="text-3xl font-bold text-primary" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                        <meta itemprop="priceCurrency" content="INR">
+                                        <span itemprop="price">₹2,999</span>
+                                    </span>
+                                    <p class="text-gray5 text-sm">One-time payment</p>
+                                </div>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 text-dark" itemprop="name">AWS Solutions Architect & DevOps</h3>
+                            <p class="text-gray5 mb-6" itemprop="description">Master AWS services, architecture patterns, and combine with DevOps practices for automated, scalable cloud infrastructure.</p>
+                            
+                            <div class="mb-6">
+                                <h4 class="font-bold mb-3 text-lg text-dark">What's Included:</h4>
+                                <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>
+                                        <span class="text-gray6">120+ Hours Video Content</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>
+                                        <span class="text-gray6">Comprehensive Notes</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>
+                                        <span class="text-gray6">15+ Real Projects</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>
+                                        <span class="text-gray6">Resume Building</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>
+                                        <span class="text-gray6">Placement Guide</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>
+                                        <span class="text-gray6">Interview Preparation</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="flex justify-between text-sm text-gray4 mb-6">
+                                <span><i class="fas fa-clock mr-1" aria-hidden="true"></i> 90+ hours</span>
+                                <span><i class="fas fa-video mr-1" aria-hidden="true"></i> 30 modules</span>
+                                <span><i class="fas fa-tasks mr-1" aria-hidden="true"></i> 15 Projects</span>
+                            </div>
+                            <button class="w-full py-3.5 bg-primary text-white rounded-lg font-bold hover:bg-secondary transition">Enroll in AWS Course</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Features Section -->
+        <section id="features" class="py-20 bg-white" aria-labelledby="features-heading">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 id="features-heading" class="text-3xl md:text-5xl font-bold mb-4 text-dark">Why Choose Velocity9?</h2>
+                    <p class="text-xl max-w-3xl mx-auto text-gray5">We provide the most comprehensive learning experience with end-to-end career support.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="feature-card bg-white p-8 rounded-xl shadow-sm border border-gray2 text-center hover:shadow-md transition">
+                        <div class="w-20 h-20 bg-primary rounded-xl flex items-center justify-center mx-auto mb-6 feature-icon">
+                            <i class="fas fa-laptop-code text-white text-3xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">Comprehensive Video Library</h3>
+                        <p class="text-gray5">Access 100+ hours of high-quality, recorded video content that you can watch at your own pace.</p>
+                    </div>
+                    
+                    <div class="feature-card bg-white p-8 rounded-xl shadow-sm border border-gray2 text-center hover:shadow-md transition">
+                        <div class="w-20 h-20 bg-primary rounded-xl flex items-center justify-center mx-auto mb-6 feature-icon">
+                            <i class="fas fa-file-alt text-white text-3xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">Detailed Study Notes</h3>
+                        <p class="text-gray5">Get comprehensive, well-organized notes for every module to reinforce your learning.</p>
+                    </div>
+                    
+                    <div class="feature-card bg-white p-8 rounded-xl shadow-sm border border-gray2 text-center hover:shadow-md transition">
+                        <div class="w-20 h-20 bg-primary rounded-xl flex items-center justify-center mx-auto mb-6 feature-icon">
+                            <i class="fas fa-project-diagram text-white text-3xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">Real-World Projects</h3>
+                        <p class="text-gray5">Build 12-15 industry-relevant projects to create a strong portfolio that impresses employers.</p>
+                    </div>
+                    
+                    <div class="feature-card bg-white p-8 rounded-xl shadow-sm border border-gray2 text-center hover:shadow-md transition">
+                        <div class="w-20 h-20 accent-gradient rounded-xl flex items-center justify-center mx-auto mb-6 feature-icon">
+                            <i class="fas fa-file-contract text-white text-3xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">Resume Building</h3>
+                        <p class="text-gray5">Get professional resume templates and personalized feedback to showcase your skills effectively.</p>
+                    </div>
+                    
+                    <div class="feature-card bg-white p-8 rounded-xl shadow-sm border border-gray2 text-center hover:shadow-md transition">
+                        <div class="w-20 h-20 accent-gradient rounded-xl flex items-center justify-center mx-auto mb-6 feature-icon">
+                            <i class="fas fa-briefcase text-white text-3xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">Placement Guide</h3>
+                        <p class="text-gray5">Comprehensive guide with job search strategies, company research, and negotiation techniques.</p>
+                    </div>
+                    
+                    <div class="feature-card bg-white p-8 rounded-xl shadow-sm border border-gray2 text-center hover:shadow-md transition">
+                        <div class="w-20 h-20 accent-gradient rounded-xl flex items-center justify-center mx-auto mb-6 feature-icon">
+                            <i class="fas fa-user-tie text-white text-3xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">Interview Preparation</h3>
+                        <p class="text-gray5">Mock interviews, common questions, and technical assessments to prepare you for real interviews.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-20 bg-light" aria-labelledby="pricing-heading">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 id="pricing-heading" class="text-3xl md:text-5xl font-bold mb-4 text-dark">Simple, Transparent Pricing</h2>
+                    <p class="text-xl max-w-3xl mx-auto text-gray5">One comprehensive package with everything you need to launch your career</p>
+                </div>
+                
+                <div class="max-w-4xl mx-auto">
+                    <div class="pricing-card bg-white rounded-xl overflow-hidden">
+                        <div class="gradient-bg p-8 text-center text-white">
+                            <h3 class="text-3xl font-bold mb-2">All-Inclusive Program</h3>
+                            <p class="text-blue-100 text-lg">Everything you need to master DevOps & AWS and land your dream job</p>
+                        </div>
+                        <div class="p-8">
+                            <div class="text-center mb-8">
+                                <div class="flex justify-center items-baseline">
+                                    <span class="text-5xl font-bold text-primary">₹2,999</span>
+                                    <span class="text-gray5 ml-2 text-xl">one-time</span>
+                                </div>
+                                <p class="text-gray5 mt-2">No hidden fees, no monthly subscriptions</p>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                                <div>
+                                    <h4 class="font-bold text-lg mb-4 text-dark">Course Features</h4>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check-circle text-green-500 mr-3" aria-hidden="true"></i>
+                                            <span class="text-gray6">100+ Hours Video Content</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check-circle text-green-500 mr-3" aria-hidden="true"></i>
+                                            <span class="text-gray6">Comprehensive Study Notes</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check-circle text-green-500 mr-3" aria-hidden="true"></i>
+                                            <span class="text-gray6">12-15 Real Projects</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check-circle text-green-500 mr-3" aria-hidden="true"></i>
+                                            <span class="text-gray6">Lifetime Access</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-4 text-dark">Career Support</h4>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check-circle text-green-500 mr-3" aria-hidden="true"></i>
+                                            <span class="text-gray6">Professional Resume Building</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check-circle text-green-500 mr-3" aria-hidden="true"></i>
+                                            <span class="text-gray6">Comprehensive Placement Guide</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check-circle text-green-500 mr-3" aria-hidden="true"></i>
+                                            <span class="text-gray6">Interview Preparation</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check-circle text-green-500 mr-3" aria-hidden="true"></i>
+                                            <span class="text-gray6">Job Search Assistance</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center">
+                                <button class="px-10 py-4 gradient-bg text-white text-xl font-bold rounded-lg hover:shadow-xl transition">
+                                    Enroll Now at ₹2,999
+                                </button>
+                                <p class="text-gray5 mt-4">30-day money-back guarantee • No questions asked</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12 bg-white rounded-xl p-8 text-center border border-gray2">
+                        <h3 class="text-2xl font-bold mb-4 text-dark">Not Sure Which Course to Choose?</h3>
+                        <p class="text-gray5 mb-6 max-w-2xl mx-auto">Get personalized guidance from our career counselors to help you select the right path based on your background and career goals.</p>
+                        <button class="px-8 py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition">
+                            <i class="fas fa-comments mr-2" aria-hidden="true"></i> Talk to a Counselor
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="section-divider"></div>
+
+    <!-- Footer -->
+    <footer role="contentinfo" class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-lg" aria-label="Velocity9 Logo">V9</div>
+                        <span class="ml-3 text-xl font-bold text-white">Velocity9</span>
+                    </div>
+                    <p class="text-gray3 mb-6">Accelerate your career with industry-leading DevOps and AWS training programs.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray6 flex items-center justify-center hover:bg-primary transition" aria-label="Follow us on Twitter">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray6 flex items-center justify-center hover:bg-primary transition" aria-label="Follow us on LinkedIn">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray6 flex items-center justify-center hover:bg-primary transition" aria-label="Follow us on YouTube">
+                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray6 flex items-center justify-center hover:bg-primary transition" aria-label="Follow us on Instagram">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Courses</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray3 hover:text-white transition">DevOps Engineering</a></li>
+                        <li><a href="#" class="text-gray3 hover:text-white transition">AWS Cloud Mastery</a></li>
+                        <li><a href="#" class="text-gray3 hover:text-white transition">Course Comparison</a></li>
+                        <li><a href="#" class="text-gray3 hover:text-white transition">Free Resources</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray3 hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="text-gray3 hover:text-white transition">Success Stories</a></li>
+                        <li><a href="#" class="text-gray3 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray3 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Get In Touch</h3>
+                    <p class="text-gray3 mb-4">Have questions? Reach out to our support team.</p>
+                    <div class="flex space-x-2">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium">Email Us</p>
+                            <p class="text-gray3 text-sm">support@velocity9.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray6 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray3">© 2023 Velocity9. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="/privacy-policy" class="text-gray3 hover:text-white transition">Privacy Policy</a>
+                    <a href="/terms-of-service" class="text-gray3 hover:text-white transition">Terms of Service</a>
+                    <a href="/refund-policy" class="text-gray3 hover:text-white transition">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script for smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Track form submissions for analytics
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Here you would typically send data to Google Analytics
+                console.log('Button clicked:', this.textContent);
+            });
+        });
+    </script>
+</body>
+</html>
