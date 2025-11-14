@@ -4,14 +4,15 @@
     <!-- Essential Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Master DevOps & AWS with Velocity9's comprehensive courses. Get certified, build real projects, and land your dream job with our career support. Enroll now at ₹2,999.">
-    <meta name="keywords" content="DevOps course, AWS training, cloud computing, DevOps certification, AWS certification, online IT courses, career transformation, Velocity9">
+    <title>DevOps & AWS Mastery Courses | Velocity9 DevOps Hub - Get Certified & Land Your Dream Job</title>
+    <meta name="description" content="Master DevOps & AWS with Velocity9's comprehensive courses. Learn Kubernetes, Docker, CI/CD, Terraform, Jenkins and cloud computing. Get certified, build real projects, and land your dream job with career support. Enroll now at ₹2,999.">
+    <meta name="keywords" content="DevOps course, AWS training, cloud computing, Kubernetes, Docker, CI/CD, Terraform, Jenkins, DevOps certification, AWS certification, online IT courses, career transformation, Velocity9">
     <meta name="author" content="Velocity9">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Velocity9 | DevOps & AWS Mastery Courses">
-    <meta property="og:description" content="Master DevOps & AWS with comprehensive courses. Get certified, build real projects, and land your dream job. Enroll now at ₹2,999.">
+    <meta property="og:title" content="DevOps & AWS Mastery Courses | Velocity9 DevOps Hub">
+    <meta property="og:description" content="Master DevOps & AWS with comprehensive courses. Learn Kubernetes, Docker, CI/CD and cloud tools. Get certified, build real projects, and land your dream job.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://velocity9.com">
     <meta property="og:image" content="https://velocity9.com/images/og-image.jpg">
@@ -19,13 +20,14 @@
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Velocity9 | DevOps & AWS Mastery Courses">
-    <meta name="twitter:description" content="Master DevOps & AWS with comprehensive courses. Get certified, build real projects, and land your dream job.">
+    <meta name="twitter:title" content="DevOps & AWS Mastery Courses | Velocity9 DevOps Hub">
+    <meta name="twitter:description" content="Master DevOps & AWS with comprehensive courses. Learn Kubernetes, Docker, CI/CD and cloud tools. Get certified and land your dream job.">
     <meta name="twitter:image" content="https://velocity9.com/images/twitter-card.jpg">
     <meta name="twitter:site" content="@velocity9">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://velocity9.com">
+    <script src='https://www.noupe.com/embed/019a81ad125c73588f5a480bdf12b9f9a1c0.js'></script>
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -37,20 +39,25 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     
+    <!-- Performance Optimizations -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZD5B0WPMCB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZD5B0WPMCB');
+    </script>
 
-  gtag('config', 'G-ZD5B0WPMCB');
-</script>
-
-
-<script>
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-</script>
-<script defer src="/_vercel/insights/script.js"></script>
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
@@ -124,7 +131,6 @@
     }
     </script>
 
-    <title>Velocity9 DevOps Hub | DevOps & AWS Mastery Courses - Get Certified & Land Your Dream Job</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -248,35 +254,98 @@
             white-space: nowrap;
             border: 0;
         }
+        /* Mobile menu styles */
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        .mobile-overlay {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .mobile-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        /* Lazy loading for images */
+        img.lazy {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        img.lazy.loaded {
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="bg-light text-dark font-inter">
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white p-2 z-50 rounded">Skip to main content</a>
 
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-overlay" class="mobile-overlay fixed inset-0 bg-black/50 z-40 md:hidden"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 left-0 h-full w-64 bg-white z-50 shadow-xl md:hidden">
+        <div class="p-4 border-b border-gray2">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-sm">V9</div>
+                    <div class="ml-2 flex flex-col">
+                        <span class="text-lg font-bold text-primary">Velocity9</span>
+                        <span class="text-xs text-gray5 font-medium">DevOps Hub</span>
+                    </div>
+                </div>
+                <button id="close-menu" class="p-2 rounded-lg hover:bg-gray1">
+                    <i class="fas fa-times text-gray6"></i>
+                </button>
+            </div>
+        </div>
+        <nav class="p-4">
+            <ul class="space-y-4">
+                <li><a href="#home" class="block py-2 font-medium text-gray6 hover:text-primary transition">Home</a></li>
+                <li><a href="#courses" class="block py-2 font-medium text-gray6 hover:text-primary transition">Courses</a></li>
+                <li><a href="#features" class="block py-2 font-medium text-gray6 hover:text-primary transition">Features</a></li>
+                <li><a href="#pricing" class="block py-2 font-medium text-gray6 hover:text-primary transition">Pricing</a></li>
+                <li><a href="#blog" class="block py-2 font-medium text-gray6 hover:text-primary transition">Blog</a></li>
+                <li><a href="https://velocity9-dev.vercel.app/" target="_blank" class="block py-2 font-medium text-green-600 hover:text-green-700 transition">Free Notes</a></li>
+                <li class="pt-4 border-t border-gray2">
+                    <button class="w-full py-2.5 bg-primary text-white rounded-lg font-medium hover:bg-secondary transition">Enroll Now</button>
+                </li>
+                <li>
+                    <button class="w-full py-2.5 border border-gray3 text-gray6 rounded-lg font-medium hover:bg-gray1 transition">Login</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
     <!-- Header/Navigation -->
-    <header role="banner" class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray2 shadow-sm">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <header role="banner" class="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray2 shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
-                <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-lg" aria-label="Velocity9 Logo">V9</div>
-                <div class="ml-3 flex flex-col">
-                    <span class="text-xl font-bold text-primary">Velocity9</span>
-                    <span class="text-sm text-gray5 font-medium">DevOps Hub</span>
+                <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-sm" aria-label="Velocity9 Logo">V9</div>
+                <div class="ml-2 flex flex-col">
+                    <span class="text-lg font-bold text-primary">Velocity9</span>
+                    <span class="text-xs text-gray5 font-medium">DevOps Hub</span>
                 </div>
             </div>
-            <nav role="navigation" aria-label="Main navigation">
-                <ul class="hidden md:flex space-x-10">
-                    <li><a href="#home" class="nav-link font-medium transition-all duration-300 text-gray6 hover:text-primary">Home</a></li>
-                    <li><a href="#courses" class="nav-link font-medium transition-all duration-300 text-gray6 hover:text-primary">Courses</a></li>
-                    <li><a href="#features" class="nav-link font-medium transition-all duration-300 text-gray6 hover:text-primary">Features</a></li>
-                    <li><a href="#curriculum" class="nav-link font-medium transition-all duration-300 text-gray6 hover:text-primary">Curriculum</a></li>
-                    <li><a href="#pricing" class="nav-link font-medium transition-all duration-300 text-gray6 hover:text-primary">Pricing</a></li>
+            <nav role="navigation" aria-label="Main navigation" class="hidden md:block">
+                <ul class="flex space-x-6 text-sm">
+                    <li><a href="#home" class="nav-link font-medium transition-all duration-300 text-gray6 hover:text-primary py-2">Home</a></li>
+                    <li><a href="#courses" class="nav-link font-medium transition-all duration-300 text-gray6 hover:text-primary py-2">Courses</a></li>
+                    <li><a href="#features" class="nav-link font-medium transition-all duration-300 text-gray6 hover:text-primary py-2">Features</a></li>
+                    <li><a href="#pricing" class="nav-link font-medium transition-all duration-300 text-gray6 hover:text-primary py-2">Pricing</a></li>
+                    <li><a href="#blog" class="nav-link font-medium transition-all duration-300 text-gray6 hover:text-primary py-2">Blog</a></li>
+                    <li><a href="https://velocity9-dev.vercel.app/" target="_blank" class="nav-link font-medium transition-all duration-300 text-green-600 hover:text-green-700 py-2">Free Notes</a></li>
                 </ul>
             </nav>
-            <div class="flex items-center space-x-4">
-                <button class="px-5 py-2 rounded-lg font-medium text-gray6 hover:text-primary transition">Login</button>
-                <button class="px-5 py-2 bg-primary text-white rounded-lg font-medium hover:bg-secondary transition">Enroll Now</button>
-                <button class="md:hidden text-xl text-gray6" aria-label="Mobile menu">
+            <div class="flex items-center space-x-3">
+                <button class="hidden md:block px-4 py-1.5 rounded-lg font-medium text-gray6 hover:text-primary transition text-sm">Login</button>
+                <button class="hidden md:block px-4 py-1.5 bg-primary text-white rounded-lg font-medium hover:bg-secondary transition text-sm">Enroll Now</button>
+                <button id="open-menu" class="md:hidden text-lg text-gray6 p-2 rounded-lg hover:bg-gray1 transition" aria-label="Mobile menu">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -292,14 +361,15 @@
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center relative z-10">
             <div class="md:w-1/2 mb-12 md:mb-0 animate-fade-in">
                 <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Master <span class="bg-white/20 px-2 rounded-lg">DevOps</span> & <span class="bg-white/20 px-2 rounded-lg">AWS</span> with Industry Experts</h1>
-                <p class="text-xl mb-8 max-w-2xl text-blue-100">Transform your career with our intensive DevOps & AWS program. Get certified, build real-world projects, and land your dream job with our comprehensive career support.</p>
+                <p class="text-xl mb-8 max-w-2xl text-blue-100">Transform your career with our intensive DevOps & AWS program. Learn Kubernetes, Docker, CI/CD pipelines, Terraform, Jenkins and cloud computing tools. Get certified, build real-world projects, and land your dream job with our comprehensive career support.</p>
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                     <button class="px-8 py-4 bg-white text-primary font-bold rounded-lg hover:shadow-2xl transition flex items-center justify-center">
                         <i class="fas fa-play-circle mr-2" aria-hidden="true"></i> Watch Course Demo
                     </button>
- <a href="DevOps_Guide_2025.pdf" download="Velocity9_DevOps_Syllabus.pdf" class="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-primary transition flex items-center justify-center text-center">
+                    <a href="DevOps_Guide_2025.pdf" download="Velocity9_DevOps_Syllabus.pdf" class="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-primary transition flex items-center justify-center text-center">
                         <i class="fas fa-download mr-2" aria-hidden="true"></i> Download Syllabus
-                    </a>                </div>
+                    </a>
+                </div>
                 <div class="mt-10 flex flex-wrap items-center gap-6">
                     <div class="flex items-center">
                         <div class="flex -space-x-3">
@@ -376,8 +446,8 @@
         <section id="courses" class="py-20 bg-light" aria-labelledby="courses-heading">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16">
-                    <h2 id="courses-heading" class="text-3xl md:text-5xl font-bold mb-4 text-dark">Our Premium Courses</h2>
-                    <p class="text-xl max-w-3xl mx-auto text-gray5">Comprehensive programs designed to take you from beginner to expert with hands-on projects and career support.</p>
+                    <h1 id="courses-heading" class="text-3xl md:text-5xl font-bold mb-4 text-dark">Our Premium DevOps & AWS Courses</h1>
+                    <p class="text-xl max-w-3xl mx-auto text-gray5">Comprehensive programs designed to take you from beginner to expert with hands-on projects and career support in cloud computing and DevOps practices.</p>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
                     <!-- DevOps Course -->
@@ -398,11 +468,11 @@
                                     <p class="text-gray5 text-sm">One-time payment</p>
                                 </div>
                             </div>
-                            <h3 class="text-2xl font-bold mb-4 text-dark" itemprop="name">Complete DevOps Engineer Mastery</h3>
-                            <p class="text-gray5 mb-6" itemprop="description">Master CI/CD, Docker, Kubernetes, Terraform, Jenkins, and more to become a DevOps expert. Build automated infrastructure and deployment pipelines.</p>
+                            <h2 class="text-2xl font-bold mb-4 text-dark" itemprop="name">Complete DevOps Engineer Mastery</h2>
+                            <p class="text-gray5 mb-6" itemprop="description">Master CI/CD, Docker, Kubernetes, Terraform, Jenkins, and more to become a DevOps expert. Build automated infrastructure and deployment pipelines in the cloud.</p>
                             
                             <div class="mb-6">
-                                <h4 class="font-bold mb-3 text-lg text-dark">What's Included:</h4>
+                                <h3 class="font-bold mb-3 text-lg text-dark">What's Included:</h3>
                                 <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
                                     <li class="flex items-center">
                                         <i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>
@@ -458,11 +528,11 @@
                                     <p class="text-gray5 text-sm">One-time payment</p>
                                 </div>
                             </div>
-                            <h3 class="text-2xl font-bold mb-4 text-dark" itemprop="name">AWS Solutions Architect & DevOps</h3>
-                            <p class="text-gray5 mb-6" itemprop="description">Master AWS services, architecture patterns, and combine with DevOps practices for automated, scalable cloud infrastructure.</p>
+                            <h2 class="text-2xl font-bold mb-4 text-dark" itemprop="name">AWS Solutions Architect & DevOps</h2>
+                            <p class="text-gray5 mb-6" itemprop="description">Master AWS services, architecture patterns, and combine with DevOps practices for automated, scalable cloud infrastructure using Kubernetes and Docker.</p>
                             
                             <div class="mb-6">
-                                <h4 class="font-bold mb-3 text-lg text-dark">What's Included:</h4>
+                                <h3 class="font-bold mb-3 text-lg text-dark">What's Included:</h3>
                                 <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
                                     <li class="flex items-center">
                                         <i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>
@@ -510,7 +580,7 @@
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16">
                     <h2 id="features-heading" class="text-3xl md:text-5xl font-bold mb-4 text-dark">Why Choose Velocity9 DevOps Hub?</h2>
-                    <p class="text-xl max-w-3xl mx-auto text-gray5">We provide the most comprehensive learning experience with end-to-end career support.</p>
+                    <p class="text-xl max-w-3xl mx-auto text-gray5">We provide the most comprehensive learning experience with end-to-end career support in DevOps and cloud computing.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     <div class="feature-card bg-white p-8 rounded-xl shadow-sm border border-gray2 text-center hover:shadow-md transition">
@@ -518,7 +588,7 @@
                             <i class="fas fa-laptop-code text-white text-3xl" aria-hidden="true"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-dark">Comprehensive Video Library</h3>
-                        <p class="text-gray5">Access 100+ hours of high-quality, recorded video content that you can watch at your own pace.</p>
+                        <p class="text-gray5">Access 100+ hours of high-quality, recorded video content covering DevOps tools, AWS services, Kubernetes, Docker, and CI/CD that you can watch at your own pace.</p>
                     </div>
                     
                     <div class="feature-card bg-white p-8 rounded-xl shadow-sm border border-gray2 text-center hover:shadow-md transition">
@@ -526,7 +596,7 @@
                             <i class="fas fa-file-alt text-white text-3xl" aria-hidden="true"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-dark">Detailed Study Notes</h3>
-                        <p class="text-gray5">Get comprehensive, well-organized notes for every module to reinforce your learning.</p>
+                        <p class="text-gray5">Get comprehensive, well-organized notes for every module covering DevOps practices, cloud infrastructure, and AWS services to reinforce your learning.</p>
                     </div>
                     
                     <div class="feature-card bg-white p-8 rounded-xl shadow-sm border border-gray2 text-center hover:shadow-md transition">
@@ -534,7 +604,7 @@
                             <i class="fas fa-project-diagram text-white text-3xl" aria-hidden="true"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-dark">Real-World Projects</h3>
-                        <p class="text-gray5">Build 12-15 industry-relevant projects to create a strong portfolio that impresses employers.</p>
+                        <p class="text-gray5">Build 12-15 industry-relevant projects using Kubernetes, Docker, AWS, and DevOps tools to create a strong portfolio that impresses employers.</p>
                     </div>
                     
                     <div class="feature-card bg-white p-8 rounded-xl shadow-sm border border-gray2 text-center hover:shadow-md transition">
@@ -542,7 +612,7 @@
                             <i class="fas fa-file-contract text-white text-3xl" aria-hidden="true"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-dark">Resume Building</h3>
-                        <p class="text-gray5">Get professional resume templates and personalized feedback to showcase your skills effectively.</p>
+                        <p class="text-gray5">Get professional resume templates and personalized feedback to showcase your DevOps and cloud computing skills effectively.</p>
                     </div>
                     
                     <div class="feature-card bg-white p-8 rounded-xl shadow-sm border border-gray2 text-center hover:shadow-md transition">
@@ -550,7 +620,7 @@
                             <i class="fas fa-briefcase text-white text-3xl" aria-hidden="true"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-dark">Placement Guide</h3>
-                        <p class="text-gray5">Comprehensive guide with job search strategies, company research, and negotiation techniques.</p>
+                        <p class="text-gray5">Comprehensive guide with job search strategies, company research, and negotiation techniques specifically for DevOps and cloud roles.</p>
                     </div>
                     
                     <div class="feature-card bg-white p-8 rounded-xl shadow-sm border border-gray2 text-center hover:shadow-md transition">
@@ -558,8 +628,92 @@
                             <i class="fas fa-user-tie text-white text-3xl" aria-hidden="true"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-dark">Interview Preparation</h3>
-                        <p class="text-gray5">Mock interviews, common questions, and technical assessments to prepare you for real interviews.</p>
+                        <p class="text-gray5">Mock interviews, common DevOps and AWS questions, and technical assessments to prepare you for real cloud computing interviews.</p>
                     </div>
+                </div>
+                
+                <!-- Notes Green Card -->
+                <div class="max-w-2xl mx-auto mt-12">
+                    <div class="bg-gradient-to-r from-green-500 to-green-600 p-8 rounded-xl text-center text-white shadow-lg">
+                        <div class="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-book-open text-2xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Free DevOps & AWS Study Notes Available</h3>
+                        <p class="mb-6 text-green-100">Access comprehensive DevOps and AWS study notes covering Kubernetes, Docker, CI/CD, Terraform, and cloud computing to supplement your learning journey.</p>
+                        <a href="https://velocity9-dev.vercel.app/" target="_blank" class="inline-flex items-center px-6 py-3 bg-white text-green-600 font-bold rounded-lg hover:bg-gray-100 transition">
+                            <i class="fas fa-external-link-alt mr-2" aria-hidden="true"></i>
+                            Access Velocity Notes
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Blog Section -->
+        <section id="blog" class="py-20 bg-light" aria-labelledby="blog-heading">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 id="blog-heading" class="text-3xl md:text-5xl font-bold mb-4 text-dark">DevOps & AWS Learning Resources</h2>
+                    <p class="text-xl max-w-3xl mx-auto text-gray5">Explore our comprehensive tutorials, guides, and articles to master DevOps practices and AWS cloud computing.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Blog Post 1 -->
+                    <article class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray2 course-card">
+                        <div class="h-48 bg-gradient-to-r from-blue-500 to-blue-700 flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <span class="text-white text-xl font-bold relative z-10">Kubernetes Guide</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3 text-dark">Kubernetes for Beginners: Complete Guide</h3>
+                            <p class="text-gray5 mb-4">Learn how to deploy, scale, and manage containerized applications using Kubernetes in this comprehensive DevOps tutorial.</p>
+                            <div class="flex justify-between items-center text-sm text-gray4">
+                                <span><i class="fas fa-clock mr-1" aria-hidden="true"></i> 15 min read</span>
+                                <a href="/kubernetes-beginners-guide" class="text-primary font-medium hover:text-secondary transition">Read More →</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 2 -->
+                    <article class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray2 course-card">
+                        <div class="h-48 bg-gradient-to-r from-green-500 to-green-700 flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <span class="text-white text-xl font-bold relative z-10">AWS Tutorial</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3 text-dark">AWS EC2 vs Lambda: When to Use Which</h3>
+                            <p class="text-gray5 mb-4">Compare AWS compute services and learn best practices for choosing between EC2 and Lambda in your cloud architecture.</p>
+                            <div class="flex justify-between items-center text-sm text-gray4">
+                                <span><i class="fas fa-clock mr-1" aria-hidden="true"></i> 12 min read</span>
+                                <a href="/aws-ec2-vs-lambda" class="text-primary font-medium hover:text-secondary transition">Read More →</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 3 -->
+                    <article class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray2 course-card">
+                        <div class="h-48 bg-gradient-to-r from-purple-500 to-purple-700 flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <span class="text-white text-xl font-bold relative z-10">CI/CD Pipeline</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3 text-dark">Building CI/CD Pipeline with Jenkins & Docker</h3>
+                            <p class="text-gray5 mb-4">Step-by-step guide to creating a complete CI/CD pipeline using Jenkins, Docker, and Kubernetes for DevOps automation.</p>
+                            <div class="flex justify-between items-center text-sm text-gray4">
+                                <span><i class="fas fa-clock mr-1" aria-hidden="true"></i> 18 min read</span>
+                                <a href="/jenkins-docker-cicd-pipeline" class="text-primary font-medium hover:text-secondary transition">Read More →</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <a href="/blog" class="inline-flex items-center px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-secondary transition">
+                        <i class="fas fa-book-open mr-2" aria-hidden="true"></i>
+                        View All DevOps & AWS Articles
+                    </a>
                 </div>
             </div>
         </section>
@@ -571,14 +725,14 @@
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16">
                     <h2 id="pricing-heading" class="text-3xl md:text-5xl font-bold mb-4 text-dark">Simple, Transparent Pricing</h2>
-                    <p class="text-xl max-w-3xl mx-auto text-gray5">One comprehensive package with everything you need to launch your career</p>
+                    <p class="text-xl max-w-3xl mx-auto text-gray5">One comprehensive package with everything you need to launch your career in DevOps and cloud computing</p>
                 </div>
                 
                 <div class="max-w-4xl mx-auto">
                     <div class="pricing-card bg-white rounded-xl overflow-hidden">
                         <div class="gradient-bg p-8 text-center text-white">
-                            <h3 class="text-3xl font-bold mb-2">All-Inclusive Program</h3>
-                            <p class="text-blue-100 text-lg">Everything you need to master DevOps & AWS and land your dream job</p>
+                            <h3 class="text-3xl font-bold mb-2">All-Inclusive DevOps & AWS Program</h3>
+                            <p class="text-blue-100 text-lg">Everything you need to master DevOps practices, AWS cloud, Kubernetes, Docker and land your dream job</p>
                         </div>
                         <div class="p-8">
                             <div class="text-center mb-8">
@@ -644,8 +798,8 @@
                     </div>
                     
                     <div class="mt-12 bg-white rounded-xl p-8 text-center border border-gray2">
-                        <h3 class="text-2xl font-bold mb-4 text-dark">Not Sure Which Course to Choose?</h3>
-                        <p class="text-gray5 mb-6 max-w-2xl mx-auto">Get personalized guidance from our career counselors to help you select the right path based on your background and career goals.</p>
+                        <h3 class="text-2xl font-bold mb-4 text-dark">Not Sure Which DevOps or AWS Course to Choose?</h3>
+                        <p class="text-gray5 mb-6 max-w-2xl mx-auto">Get personalized guidance from our career counselors to help you select the right path based on your background and career goals in cloud computing and DevOps.</p>
                         <button class="px-8 py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition">
                             <i class="fas fa-comments mr-2" aria-hidden="true"></i> Talk to a Counselor
                         </button>
@@ -661,7 +815,8 @@
     <footer role="contentinfo" class="bg-dark text-white py-12">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
+                <!-- Company Info -->
+                <div class="md:col-span-1">
                     <div class="flex items-center mb-6">
                         <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-lg" aria-label="Velocity9 Logo">V9</div>
                         <div class="ml-3 flex flex-col">
@@ -669,79 +824,195 @@
                             <span class="text-sm text-gray3 font-medium">DevOps Hub</span>
                         </div>
                     </div>
-                    <p class="text-gray3 mb-6">Accelerate your career with industry-leading DevOps and AWS training programs.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray6 flex items-center justify-center hover:bg-primary transition" aria-label="Follow us on Twitter">
-                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                    <p class="text-gray3 mb-6 text-sm leading-relaxed">Accelerate your career with industry-leading DevOps and AWS training programs. Transform your skills and land your dream job in cloud computing.</p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-9 h-9 rounded-full bg-gray6 flex items-center justify-center hover:bg-primary transition duration-300" aria-label="Follow us on Twitter">
+                            <i class="fab fa-twitter text-sm" aria-hidden="true"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray6 flex items-center justify-center hover:bg-primary transition" aria-label="Follow us on LinkedIn">
-                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        <a href="#" class="w-9 h-9 rounded-full bg-gray6 flex items-center justify-center hover:bg-primary transition duration-300" aria-label="Follow us on LinkedIn">
+                            <i class="fab fa-linkedin-in text-sm" aria-hidden="true"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray6 flex items-center justify-center hover:bg-primary transition" aria-label="Follow us on YouTube">
-                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                        <a href="#" class="w-9 h-9 rounded-full bg-gray6 flex items-center justify-center hover:bg-primary transition duration-300" aria-label="Follow us on YouTube">
+                            <i class="fab fa-youtube text-sm" aria-hidden="true"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray6 flex items-center justify-center hover:bg-primary transition" aria-label="Follow us on Instagram">
-                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        <a href="#" class="w-9 h-9 rounded-full bg-gray6 flex items-center justify-center hover:bg-primary transition duration-300" aria-label="Follow us on Instagram">
+                            <i class="fab fa-instagram text-sm" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
                 
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Courses</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray3 hover:text-white transition">DevOps Engineering</a></li>
-                        <li><a href="#" class="text-gray3 hover:text-white transition">AWS Cloud Mastery</a></li>
-                        <li><a href="#" class="text-gray3 hover:text-white transition">Course Comparison</a></li>
-                        <li><a href="#" class="text-gray3 hover:text-white transition">Free Resources</a></li>
+                <!-- Courses -->
+                <div class="md:col-span-1">
+                    <h3 class="text-lg font-bold mb-4 text-white">Courses</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray3 hover:text-white transition duration-300 text-sm flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-primary" aria-hidden="true"></i>
+                            DevOps Engineering
+                        </a></li>
+                        <li><a href="#" class="text-gray3 hover:text-white transition duration-300 text-sm flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-primary" aria-hidden="true"></i>
+                            AWS Cloud Mastery
+                        </a></li>
+                        <li><a href="#" class="text-gray3 hover:text-white transition duration-300 text-sm flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-primary" aria-hidden="true"></i>
+                            Course Comparison
+                        </a></li>
+                        <li><a href="https://velocity9-dev.vercel.app/" target="_blank" class="text-gray3 hover:text-white transition duration-300 text-sm flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-green-400" aria-hidden="true"></i>
+                            Free Study Notes
+                        </a></li>
                     </ul>
                 </div>
                 
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Company</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray3 hover:text-white transition">About Us</a></li>
-                        <li><a href="#" class="text-gray3 hover:text-white transition">Success Stories</a></li>
-                        <li><a href="#" class="text-gray3 hover:text-white transition">Blog</a></li>
-                        <li><a href="#" class="text-gray3 hover:text-white transition">Contact</a></li>
+                <!-- Company -->
+                <div class="md:col-span-1">
+                    <h3 class="text-lg font-bold mb-4 text-white">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray3 hover:text-white transition duration-300 text-sm flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-primary" aria-hidden="true"></i>
+                            About Us
+                        </a></li>
+                        <li><a href="#" class="text-gray3 hover:text-white transition duration-300 text-sm flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-primary" aria-hidden="true"></i>
+                            Success Stories
+                        </a></li>
+                        <li><a href="#" class="text-gray3 hover:text-white transition duration-300 text-sm flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-primary" aria-hidden="true"></i>
+                            Blog
+                        </a></li>
+                        <li><a href="#" class="text-gray3 hover:text-white transition duration-300 text-sm flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-primary" aria-hidden="true"></i>
+                            Contact
+                        </a></li>
                     </ul>
                 </div>
                 
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Get In Touch</h3>
-                    <p class="text-gray3 mb-4">Have questions? Reach out to our support team.</p>
-                    <div class="flex space-x-2">
-                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
-                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                <!-- Contact Info -->
+                <div class="md:col-span-1">
+                    <h3 class="text-lg font-bold mb-4 text-white">Get In Touch</h3>
+                    <p class="text-gray3 mb-6 text-sm">Have questions about our DevOps or AWS courses? Reach out to our support team for assistance.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white flex-shrink-0 mt-1">
+                                <i class="fas fa-envelope text-sm" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium text-white text-sm">Email Us</p>
+                                <p class="text-gray3 text-sm">velocityswastik99@gmail.com</p>
+                            </div>
                         </div>
-                        <div>
-                            <p class="font-medium">Email Us</p>
-                            <p class="text-gray3 text-sm">velocityswastik99@gmail.com</p>
-                             <p class="font-medium">Phone No</p>
-                            <p class="text-gray3 text-sm">8144426649</p>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center text-white flex-shrink-0 mt-1">
+                                <i class="fas fa-phone text-sm" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium text-white text-sm">Phone</p>
+                                <p class="text-gray3 text-sm">+91 81444 26649</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center text-white flex-shrink-0 mt-1">
+                                <i class="fas fa-clock text-sm" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium text-white text-sm">Support Hours</p>
+                                <p class="text-gray3 text-sm">Mon - Sat: 9AM - 6PM</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="border-t border-gray6 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray3">© 2023 Velocity9 DevOps Hub. All rights reserved.</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="/privacy-policy" class="text-gray3 hover:text-white transition">Privacy Policy</a>
-                    <a href="/terms-of-service" class="text-gray3 hover:text-white transition">Terms of Service</a>
-                    <a href="/refund-policy" class="text-gray3 hover:text-white transition">Refund Policy</a>
+            <!-- Bottom Section -->
+            <div class="border-t border-gray6 mt-12 pt-8">
+                <div class="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
+                    <!-- Copyright -->
+                    <div class="flex items-center space-x-6">
+                        <p class="text-gray3 text-sm">© 2024 Velocity9 DevOps Hub. All rights reserved.</p>
+                    </div>
+                    
+                    <!-- Policy Links -->
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <a href="/privacy-policy.html" class="text-gray3 hover:text-white transition duration-300 text-sm font-medium">Privacy Policy</a>
+                        <a href="/terms-of-service.html" class="text-gray3 hover:text-white transition duration-300 text-sm font-medium">Terms of Service</a>
+                        <a href="/refund-policy.html" class="text-gray3 hover:text-white transition duration-300 text-sm font-medium">Refund Policy</a>
+                    </div>
+                    
+                    <!-- Payment Methods -->
+                    <div class="flex items-center space-x-2">
+                        <span class="text-gray3 text-sm mr-2">We accept:</span>
+                        <div class="flex space-x-2">
+                            <div class="w-8 h-5 bg-white rounded flex items-center justify-center">
+                                <span class="text-xs font-bold text-gray-700">VISA</span>
+                            </div>
+                            <div class="w-8 h-5 bg-white rounded flex items-center justify-center">
+                                <span class="text-xs font-bold text-blue-600">MC</span>
+                            </div>
+                            <div class="w-8 h-5 bg-white rounded flex items-center justify-center">
+                                <span class="text-xs font-bold text-orange-500">PP</span>
+                            </div>
+                            <div class="w-8 h-5 bg-white rounded flex items-center justify-center">
+                                <span class="text-xs font-bold text-gray-700">UPI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional Info -->
+                <div class="mt-6 text-center">
+                    <p class="text-gray4 text-xs">
+                        Velocity9 is an online education platform specializing in DevOps, AWS, Kubernetes, Docker and Cloud technologies. 
+                        All trademarks and logos are the property of their respective owners.
+                    </p>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Performance Optimization Script -->
     <script>
+        // Mobile Menu Functionality
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+        const openMenuButton = document.getElementById('open-menu');
+        const closeMenuButton = document.getElementById('close-menu');
+        
+        function openMobileMenu() {
+            mobileMenu.classList.add('open');
+            mobileOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            mobileOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+        
+        openMenuButton.addEventListener('click', openMobileMenu);
+        closeMenuButton.addEventListener('click', closeMobileMenu);
+        mobileOverlay.addEventListener('click', closeMobileMenu);
+        
+        // Close menu when clicking on a menu link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+        
         // Simple script for smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    closeMobileMenu();
+                }
             });
         });
         
@@ -751,6 +1022,29 @@
                 // Here you would typically send data to Google Analytics
                 console.log('Button clicked:', this.textContent);
             });
+        });
+        
+        // Lazy loading implementation for images
+        document.addEventListener('DOMContentLoaded', function() {
+            const lazyImages = [].slice.call(document.querySelectorAll('img.lazy'));
+            
+            if ('IntersectionObserver' in window) {
+                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.classList.remove('lazy');
+                            lazyImage.classList.add('loaded');
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+                
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            }
         });
     </script>
 </body>
