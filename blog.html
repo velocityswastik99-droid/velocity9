@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Velocity9 DevOps Hub - DevOps & AWS Tutorials, Guides & Insights</title>
+    <meta name="description" content="Explore Velocity9's DevOps and AWS blog featuring tutorials, guides, industry insights, and career advice for cloud computing professionals.">
+    <meta name="keywords" content="DevOps blog, AWS tutorials, Kubernetes guides, Docker tutorials, cloud computing blog, DevOps career advice, Velocity9 blog">
+    <meta name="author" content="Velocity9">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Blog | Velocity9 DevOps Hub">
+    <meta property="og:description" content="Explore Velocity9's DevOps and AWS blog featuring tutorials, guides, and industry insights.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://velocity9.com/blog">
+    <meta property="og:image" content="https://velocity9.com/images/blog-og-image.jpg">
+    <meta property="og:site_name" content="Velocity9">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog | Velocity9 DevOps Hub">
+    <meta name="twitter:description" content="Explore Velocity9's DevOps and AWS blog featuring tutorials, guides, and industry insights.">
+    <meta name="twitter:image" content="https://velocity9.com/images/blog-twitter-card.jpg">
+    <meta name="twitter:site" content="@velocity9">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://velocity9.com/blog">
+    
+    <!-- Favicon and other head elements from original page -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Performance Optimizations -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZD5B0WPMCB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZD5B0WPMCB');
+    </script>
+
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Velocity9 DevOps Hub Blog",
+        "description": "DevOps and AWS tutorials, guides, industry insights, and career advice",
+        "url": "https://velocity9.com/blog",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Velocity9",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://velocity9.com/images/logo.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://velocity9.com/blog"
+        }
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563EB',
+                        secondary: '#1E40AF',
+                        accent: '#DC2626',
+                        light: '#F8FAFC',
+                        dark: '#1E293B',
+                        gray1: '#F1F5F9',
+                        gray2: '#E2E8F0',
+                        gray3: '#CBD5E1',
+                        gray4: '#94A3B8',
+                        gray5: '#64748B',
+                        gray6: '#475569'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'pulse-slow': 'pulse 3s infinite'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
+        }
+        .accent-gradient {
+            background: linear-gradient(135deg, #DC2626, #B91C1C);
+        }
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #E2E8F0, transparent);
+        }
+        .course-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #E2E8F0;
+        }
+        .course-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .feature-icon {
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1);
+        }
+        .pricing-card {
+            transition: all 0.3s ease;
+            border: 1px solid #E2E8F0;
+        }
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+        }
+        .stats-card {
+            background: linear-gradient(135deg, #2563EB, #1E40AF);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #2563EB;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .curriculum-item {
+            position: relative;
+            padding-left: 2rem;
+        }
+        .curriculum-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #2563EB;
+        }
+        /* Improve accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        /* Mobile menu styles */
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        .mobile-overlay {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .mobile-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        /* Lazy loading for images */
+        img.lazy {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        img.lazy.loaded {
+            opacity: 1;
+        }
+        /* Blog page specific styles */
+        .blog-card {
+            transition: all 0.3s ease;
+            border: 1px solid #E2E8F0;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .category-filter {
+            transition: all 0.3s ease;
+        }
+        .category-filter.active {
+            background: #2563EB;
+            color: white;
+        }
+        .blog-tag {
+            transition: all 0.3s ease;
+        }
+        .blog-tag:hover {
+            background: #2563EB;
+            color: white;
+        }
+        .pagination-item {
+            transition: all 0.3s ease;
+        }
+        .pagination-item:hover {
+            background: #2563EB;
+            color: white;
+        }
+        .pagination-item.active {
+            background: #2563EB;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-light text-dark font-inter">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white p-2 z-50 rounded">Skip to main content</a>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-overlay" class="mobile-overlay fixed inset-0 bg-black/50 z-40 md:hidden"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 left-0 h-full w-64 bg-white z-50 shadow-xl md:hidden">
+        <div class="p-4 border-b border-gray2">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-sm">V9</div>
+                    <div class="ml-2 flex flex-col">
+                        <span class="text-lg font-bold text-primary">Velocity9</span>
+                        <span class="text-xs text-gray5 font-medium">DevOps Hub</span>
+                    </div>
+                </div>
+                <button id="close-menu" class="p-2 rounded-lg hover:bg-gray1">
+                    <i class="fas fa-times text-gray6"></i>
+                </button>
+            </div>
+        </div>
+        <nav class="p-4">
+            <ul class="space-y-4">
+                <li><a href="index.html" class="block py-2 font-medium text-gray6 hover:text-primary transition">Home</a></li>
+                <li><a href="courses.html" class="block py-2 font-medium text-gray6 hover:text-primary transition">Courses</a></li>
+                <li><a href="features.html" class="block py-2 font-medium text-gray6 hover:text-primary transition">Features</a></li>
+                <li><a href="pricing.html" class="block py-2 font-medium text-gray6 hover:text-primary transition">Pricing</a></li>
+                <li><a href="blog.html" class="block py-2 font-medium text-primary transition">Blog</a></li>
+                <li><a href="about.html" class="block py-2 font-medium text-gray6 hover:text-primary transition">About Us</a></li>
+                <li><a href="contact.html" class="block py-2 font-medium text-gray6 hover:text-primary transition">Contact Us</a></li>
+                <li><a href="https://velocity9-dev.vercel.app/" target="_blank" class="block py-2 font-medium text-green-600 hover:text-green-700 transition">Free Notes</a></li>
+                <li class="pt-4 border-t border-gray2">
+                    <button class="w-full py-2.5 bg-primary text-white rounded-lg font-medium hover:bg-secondary transition">Enroll Now</button>
+                </li>
+                <li>
+                    <button class="w-full py-2.5 border border-gray3 text-gray6 rounded-lg font-medium hover:bg-gray1 transition">Login</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Header/Navigation -->
+    <header role="banner" class="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray2 shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html" class="flex items-center">
+                    <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-sm" aria-label="Velocity9 Logo">V9</div>
+                    <div class="ml-2 flex flex-col">
+                        <span class="text-lg font-bold text-primary">Velocity9</span>
+                        <span class="text-xs text-gray5 font-medium">DevOps Hub</span>
+                    </div>
+                </a>
+            </div>
+            <nav role="navigation" aria-label="Main navigation" class="hidden md:block">
+                <ul class="flex space-x-6 text-sm">
+                    <li><a href="index.html" class="nav-link font-medium transition-all duration-300 text-gray6 hover:text-primary py-2">Home</a></li>
+                    <li><a href="courses.html" class="nav-link font-medium transition-all duration-300 text-gray6 hover:text-primary py-2">Courses</a></li>
+                    <li><a href="features.html" class="nav-link font-medium transition-all duration-300 text-gray6 hover:text-primary py-2">Features</a></li>
+                    <li><a href="pricing.html" class="nav-link font-medium transition-all duration-300 text-gray6 hover:text-primary py-2">Pricing</a></li>
+                    <li><a href="blog.html" class="nav-link font-medium transition-all duration-300 text-primary py-2">Blog</a></li>
+                    <li><a href="about.html" class="nav-link font-medium transition-all duration-300 text-gray6 hover:text-primary py-2">About Us</a></li>
+                    <li><a href="contact.html" class="nav-link font-medium transition-all duration-300 text-gray6 hover:text-primary py-2">Contact Us</a></li>
+                    <li><a href="https://velocity9-dev.vercel.app/" target="_blank" class="nav-link font-medium transition-all duration-300 text-green-600 hover:text-green-700 py-2">Free Notes</a></li>
+                </ul>
+            </nav>
+            <div class="flex items-center space-x-3">
+                <button class="hidden md:block px-4 py-1.5 rounded-lg font-medium text-gray6 hover:text-primary transition text-sm">Login</button>
+                <button class="hidden md:block px-4 py-1.5 bg-primary text-white rounded-lg font-medium hover:bg-secondary transition text-sm">Enroll Now</button>
+                <button id="open-menu" class="md:hidden text-lg text-gray6 p-2 rounded-lg hover:bg-gray1 transition" aria-label="Mobile menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="gradient-bg text-white py-20 md:py-28 relative overflow-hidden" role="banner">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full animate-pulse-slow"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full animate-pulse-slow"></div>
+        </div>
+        <div class="container mx-auto px-4 flex flex-col items-center text-center relative z-10">
+            <div class="max-w-4xl animate-fade-in">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Velocity9 DevOps Blog</h1>
+                <p class="text-xl mb-8 max-w-3xl mx-auto text-blue-100">Explore tutorials, guides, and industry insights for DevOps, AWS, Kubernetes, Docker, and cloud computing.</p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#featured-posts" class="px-8 py-4 bg-white text-primary font-bold rounded-lg hover:shadow-2xl transition flex items-center justify-center">
+                        <i class="fas fa-newspaper mr-2" aria-hidden="true"></i> Featured Posts
+                    </a>
+                    <a href="#categories" class="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-primary transition flex items-center justify-center text-center">
+                        <i class="fas fa-tags mr-2" aria-hidden="true"></i> Browse Categories
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content Section -->
+    <main id="main-content" role="main" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <!-- Categories Filter -->
+            <div id="categories" class="mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-dark text-center">Browse by Category</h2>
+                <div class="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+                    <button class="category-filter px-4 py-2 bg-gray1 text-gray6 rounded-lg font-medium active" data-category="all">All Posts</button>
+                    <button class="category-filter px-4 py-2 bg-gray1 text-gray6 rounded-lg font-medium" data-category="kubernetes">Kubernetes</button>
+                    <button class="category-filter px-4 py-2 bg-gray1 text-gray6 rounded-lg font-medium" data-category="docker">Docker</button>
+                    <button class="category-filter px-4 py-2 bg-gray1 text-gray6 rounded-lg font-medium" data-category="aws">AWS</button>
+                    <button class="category-filter px-4 py-2 bg-gray1 text-gray6 rounded-lg font-medium" data-category="ci-cd">CI/CD</button>
+                    <button class="category-filter px-4 py-2 bg-gray1 text-gray6 rounded-lg font-medium" data-category="terraform">Terraform</button>
+                    <button class="category-filter px-4 py-2 bg-gray1 text-gray6 rounded-lg font-medium" data-category="career">Career</button>
+                </div>
+            </div>
+            
+            <!-- Featured Posts -->
+            <div id="featured-posts" class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold mb-8 text-dark">Featured Posts</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Featured Post 1 -->
+                    <article class="blog-card bg-light rounded-xl overflow-hidden">
+                        <div class="h-64 bg-gradient-to-r from-blue-500 to-blue-700 flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <span class="text-white text-xl font-bold relative z-10 px-4 text-center">Kubernetes for Beginners</span>
+                            <div class="absolute top-4 left-4 bg-white/20 text-white px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm">Featured</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="blog-tag px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">Kubernetes</span>
+                                <span class="blog-tag px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">Containers</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 text-dark">Kubernetes for Beginners: Complete Guide to Getting Started</h3>
+                            <p class="text-gray5 mb-4">Learn the fundamentals of Kubernetes, from basic concepts to deploying your first application. This comprehensive guide covers pods, services, deployments, and more.</p>
+                            <div class="flex justify-between items-center text-sm text-gray4">
+                                <span><i class="fas fa-clock mr-1" aria-hidden="true"></i> 15 min read</span>
+                                <span><i class="fas fa-calendar mr-1" aria-hidden="true"></i> March 15, 2024</span>
+                            </div>
+                            <a href="/kubernetes-beginners-guide" class="mt-4 inline-flex items-center text-primary font-medium hover:text-secondary transition">
+                                Read Full Article <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- Featured Post 2 -->
+                    <article class="blog-card bg-light rounded-xl overflow-hidden">
+                        <div class="h-64 bg-gradient-to-r from-green-500 to-green-700 flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <span class="text-white text-xl font-bold relative z-10 px-4 text-center">AWS Best Practices</span>
+                            <div class="absolute top-4 left-4 bg-white/20 text-white px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm">Featured</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="blog-tag px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">AWS</span>
+                                <span class="blog-tag px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-medium">Cloud Architecture</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 text-dark">AWS Cost Optimization: 10 Strategies to Reduce Your Cloud Bill</h3>
+                            <p class="text-gray5 mb-4">Discover practical strategies to optimize your AWS spending without compromising performance. Learn about reserved instances, spot instances, and right-sizing techniques.</p>
+                            <div class="flex justify-between items-center text-sm text-gray4">
+                                <span><i class="fas fa-clock mr-1" aria-hidden="true"></i> 12 min read</span>
+                                <span><i class="fas fa-calendar mr-1" aria-hidden="true"></i> March 10, 2024</span>
+                            </div>
+                            <a href="/aws-cost-optimization" class="mt-4 inline-flex items-center text-primary font-medium hover:text-secondary transition">
+                                Read Full Article <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            
+            <!-- All Blog Posts -->
+            <div class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold mb-8 text-dark">All Blog Posts</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Blog Post 1 -->
+                    <article class="blog-card bg-light rounded-xl overflow-hidden" data-category="docker ci-cd">
+                        <div class="h-48 bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <span class="text-white text-lg font-bold relative z-10 px-4 text-center">Docker & CI/CD</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="blog-tag px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">Docker</span>
+                                <span class="blog-tag px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-xs font-medium">CI/CD</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 text-dark">Building CI/CD Pipeline with Jenkins & Docker</h3>
+                            <p class="text-gray5 mb-4">Step-by-step guide to creating a complete CI/CD pipeline using Jenkins, Docker, and Kubernetes for DevOps automation.</p>
+                            <div class="flex justify-between items-center text-sm text-gray4">
+                                <span><i class="fas fa-clock mr-1" aria-hidden="true"></i> 18 min read</span>
+                                <span><i class="fas fa-calendar mr-1" aria-hidden="true"></i> March 5, 2024</span>
+                            </div>
+                            <a href="/jenkins-docker-cicd-pipeline" class="mt-4 inline-flex items-center text-primary font-medium hover:text-secondary transition">
+                                Read More <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 2 -->
+                    <article class="blog-card bg-light rounded-xl overflow-hidden" data-category="aws">
+                        <div class="h-48 bg-gradient-to-r from-green-400 to-green-600 flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <span class="text-white text-lg font-bold relative z-10 px-4 text-center">AWS Tutorial</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="blog-tag px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">AWS</span>
+                                <span class="blog-tag px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-medium">Compute</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 text-dark">AWS EC2 vs Lambda: When to Use Which</h3>
+                            <p class="text-gray5 mb-4">Compare AWS compute services and learn best practices for choosing between EC2 and Lambda in your cloud architecture.</p>
+                            <div class="flex justify-between items-center text-sm text-gray4">
+                                <span><i class="fas fa-clock mr-1" aria-hidden="true"></i> 12 min read</span>
+                                <span><i class="fas fa-calendar mr-1" aria-hidden="true"></i> February 28, 2024</span>
+                            </div>
+                            <a href="/aws-ec2-vs-lambda" class="mt-4 inline-flex items-center text-primary font-medium hover:text-secondary transition">
+                                Read More <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 3 -->
+                    <article class="blog-card bg-light rounded-xl overflow-hidden" data-category="kubernetes">
+                        <div class="h-48 bg-gradient-to-r from-purple-400 to-purple-600 flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <span class="text-white text-lg font-bold relative z-10 px-4 text-center">Kubernetes Security</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="blog-tag px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-medium">Kubernetes</span>
+                                <span class="blog-tag px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs font-medium">Security</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 text-dark">Kubernetes Security Best Practices for Production</h3>
+                            <p class="text-gray5 mb-4">Essential security practices to protect your Kubernetes clusters in production environments, from network policies to RBAC.</p>
+                            <div class="flex justify-between items-center text-sm text-gray4">
+                                <span><i class="fas fa-clock mr-1" aria-hidden="true"></i> 20 min read</span>
+                                <span><i class="fas fa-calendar mr-1" aria-hidden="true"></i> February 22, 2024</span>
+                            </div>
+                            <a href="/kubernetes-security-best-practices" class="mt-4 inline-flex items-center text-primary font-medium hover:text-secondary transition">
+                                Read More <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 4 -->
+                    <article class="blog-card bg-light rounded-xl overflow-hidden" data-category="terraform">
+                        <div class="h-48 bg-gradient-to-r from-orange-400 to-orange-600 flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <span class="text-white text-lg font-bold relative z-10 px-4 text-center">Terraform Guide</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="blog-tag px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-xs font-medium">Terraform</span>
+                                <span class="blog-tag px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">Infrastructure as Code</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 text-dark">Terraform Modules: How to Create Reusable Infrastructure Code</h3>
+                            <p class="text-gray5 mb-4">Learn how to create and use Terraform modules to build reusable, maintainable infrastructure code for your DevOps projects.</p>
+                            <div class="flex justify-between items-center text-sm text-gray4">
+                                <span><i class="fas fa-clock mr-1" aria-hidden="true"></i> 14 min read</span>
+                                <span><i class="fas fa-calendar mr-1" aria-hidden="true"></i> February 15, 2024</span>
+                            </div>
+                            <a href="/terraform-modules-guide" class="mt-4 inline-flex items-center text-primary font-medium hover:text-secondary transition">
+                                Read More <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 5 -->
+                    <article class="blog-card bg-light rounded-xl overflow-hidden" data-category="career">
+                        <div class="h-48 bg-gradient-to-r from-indigo-400 to-indigo-600 flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <span class="text-white text-lg font-bold relative z-10 px-4 text-center">Career Advice</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="blog-tag px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs font-medium">Career</span>
+                                <span class="blog-tag px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">DevOps</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 text-dark">How to Land Your First DevOps Job: A Complete Guide</h3>
+                            <p class="text-gray5 mb-4">Practical advice and strategies for transitioning into a DevOps role, including skills to learn and interview preparation tips.</p>
+                            <div class="flex justify-between items-center text-sm text-gray4">
+                                <span><i class="fas fa-clock mr-1" aria-hidden="true"></i> 16 min read</span>
+                                <span><i class="fas fa-calendar mr-1" aria-hidden="true"></i> February 10, 2024</span>
+                            </div>
+                            <a href="/first-devops-job-guide" class="mt-4 inline-flex items-center text-primary font-medium hover:text-secondary transition">
+                                Read More <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 6 -->
+                    <article class="blog-card bg-light rounded-xl overflow-hidden" data-category="docker">
+                        <div class="h-48 bg-gradient-to-r from-teal-400 to-teal-600 flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <span class="text-white text-lg font-bold relative z-10 px-4 text-center">Docker Security</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="blog-tag px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-xs font-medium">Docker</span>
+                                <span class="blog-tag px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs font-medium">Security</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 text-dark">Docker Security Scanning: Protecting Your Container Images</h3>
+                            <p class="text-gray5 mb-4">Learn how to implement Docker security scanning to detect vulnerabilities in your container images before deployment.</p>
+                            <div class="flex justify-between items-center text-sm text-gray4">
+                                <span><i class="fas fa-clock mr-1" aria-hidden="true"></i> 11 min read</span>
+                                <span><i class="fas fa-calendar mr-1" aria-hidden="true"></i> February 5, 2024</span>
+                            </div>
+                            <a href="/docker-security-scanning" class="mt-4 inline-flex items-center text-primary font-medium hover:text-secondary transition">
+                                Read More <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="flex justify-center">
+                <nav aria-label="Blog pagination">
+                    <ul class="flex space-x-2">
+                        <li><a href="#" class="pagination-item w-10 h-10 rounded-lg flex items-center justify-center bg-gray1 text-gray6 font-medium">1</a></li>
+                        <li><a href="#" class="pagination-item w-10 h-10 rounded-lg flex items-center justify-center bg-gray1 text-gray6 font-medium">2</a></li>
+                        <li><a href="#" class="pagination-item w-10 h-10 rounded-lg flex items-center justify-center bg-gray1 text-gray6 font-medium active">3</a></li>
+                        <li><a href="#" class="pagination-item w-10 h-10 rounded-lg flex items-center justify-center bg-gray1 text-gray6 font-medium">4</a></li>
+                        <li><a href="#" class="pagination-item w-10 h-10 rounded-lg flex items-center justify-center bg-gray1 text-gray6 font-medium">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </main>
+
+    <div class="section-divider"></div>
+
+    <!-- Newsletter Section -->
+    <section class="py-20 bg-light" aria-labelledby="newsletter-heading">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 id="newsletter-heading" class="text-3xl md:text-4xl font-bold mb-4 text-dark">Stay Updated with DevOps Insights</h2>
+                <p class="text-xl mb-8 text-gray5">Subscribe to our newsletter and get the latest tutorials, guides, and industry news delivered to your inbox.</p>
+                <form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+                    <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-lg border border-gray3 focus:outline-none focus:border-primary" required>
+                    <button type="submit" class="px-6 py-3 gradient-bg text-white font-bold rounded-lg hover:shadow-xl transition whitespace-nowrap">Subscribe</button>
+                </form>
+                <p class="text-sm text-gray4 mt-4">No spam, unsubscribe at any time. We respect your privacy.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer role="contentinfo" class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-1">
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-lg" aria-label="Velocity9 Logo">V9</div>
+                        <div class="ml-3 flex flex-col">
+                            <span class="text-xl font-bold text-white">Velocity9</span>
+                            <span class="text-sm text-gray3 font-medium">DevOps Hub</span>
+                        </div>
+                    </div>
+                    <p class="text-gray3 mb-6 text-sm leading-relaxed">Accelerate your career with industry-leading DevOps and AWS training programs. Transform your skills and land your dream job in cloud computing.</p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-9 h-9 rounded-full bg-gray6 flex items-center justify-center hover:bg-primary transition duration-300" aria-label="Follow us on Twitter">
+                            <i class="fab fa-twitter text-sm" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-gray6 flex items-center justify-center hover:bg-primary transition duration-300" aria-label="Follow us on LinkedIn">
+                            <i class="fab fa-linkedin-in text-sm" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-gray6 flex items-center justify-center hover:bg-primary transition duration-300" aria-label="Follow us on YouTube">
+                            <i class="fab fa-youtube text-sm" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-gray6 flex items-center justify-center hover:bg-primary transition duration-300" aria-label="Follow us on Instagram">
+                            <i class="fab fa-instagram text-sm" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Courses -->
+                <div class="md:col-span-1">
+                    <h3 class="text-lg font-bold mb-4 text-white">Courses</h3>
+                    <ul class="space-y-3">
+                        <li><a href="courses.html" class="text-gray3 hover:text-white transition duration-300 text-sm flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-primary" aria-hidden="true"></i>
+                            DevOps Engineering
+                        </a></li>
+                        <li><a href="courses.html" class="text-gray3 hover:text-white transition duration-300 text-sm flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-primary" aria-hidden="true"></i>
+                            AWS Cloud Mastery
+                        </a></li>
+                        <li><a href="courses.html" class="text-gray3 hover:text-white transition duration-300 text-sm flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-primary" aria-hidden="true"></i>
+                            Course Comparison
+                        </a></li>
+                        <li><a href="https://velocity9-dev.vercel.app/" target="_blank" class="text-gray3 hover:text-white transition duration-300 text-sm flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-green-400" aria-hidden="true"></i>
+                            Free Study Notes
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company -->
+                <div class="md:col-span-1">
+                    <h3 class="text-lg font-bold mb-4 text-white">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray3 hover:text-white transition duration-300 text-sm flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-primary" aria-hidden="true"></i>
+                            About Us
+                        </a></li>
+                        <li><a href="success-stories.html" class="text-gray3 hover:text-white transition duration-300 text-sm flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-primary" aria-hidden="true"></i>
+                            Success Stories
+                        </a></li>
+                        <li><a href="blog.html" class="text-white transition duration-300 text-sm flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-primary" aria-hidden="true"></i>
+                            Blog
+                        </a></li>
+                        <li><a href="contact.html" class="text-gray3 hover:text-white transition duration-300 text-sm flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-primary" aria-hidden="true"></i>
+                            Contact
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="md:col-span-1">
+                    <h3 class="text-lg font-bold mb-4 text-white">Get In Touch</h3>
+                    <p class="text-gray3 mb-6 text-sm">Have questions about our DevOps or AWS courses? Reach out to our support team for assistance.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white flex-shrink-0 mt-1">
+                                <i class="fas fa-envelope text-sm" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium text-white text-sm">Email Us</p>
+                                <p class="text-gray3 text-sm">velocityswastik99@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center text-white flex-shrink-0 mt-1">
+                                <i class="fas fa-phone text-sm" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium text-white text-sm">Phone</p>
+                                <p class="text-gray3 text-sm">+91 81444 26649</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center text-white flex-shrink-0 mt-1">
+                                <i class="fas fa-clock text-sm" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium text-white text-sm">Support Hours</p>
+                                <p class="text-gray3 text-sm">Mon - Sat: 9AM - 6PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Section -->
+            <div class="border-t border-gray6 mt-12 pt-8">
+                <div class="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
+                    <!-- Copyright -->
+                    <div class="flex items-center space-x-6">
+                        <p class="text-gray3 text-sm">© 2024 Velocity9 DevOps Hub. All rights reserved.</p>
+                    </div>
+                    
+                    <!-- Policy Links -->
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <a href="/privacy-policy.html" class="text-gray3 hover:text-white transition duration-300 text-sm font-medium">Privacy Policy</a>
+                        <a href="/terms-of-service.html" class="text-gray3 hover:text-white transition duration-300 text-sm font-medium">Terms of Service</a>
+                        <a href="/refund-policy.html" class="text-gray3 hover:text-white transition duration-300 text-sm font-medium">Refund Policy</a>
+                    </div>
+                    
+                    <!-- Payment Methods -->
+                    <div class="flex items-center space-x-2">
+                        <span class="text-gray3 text-sm mr-2">We accept:</span>
+                        <div class="flex space-x-2">
+                            <div class="w-8 h-5 bg-white rounded flex items-center justify-center">
+                                <span class="text-xs font-bold text-gray-700">VISA</span>
+                            </div>
+                            <div class="w-8 h-5 bg-white rounded flex items-center justify-center">
+                                <span class="text-xs font-bold text-blue-600">MC</span>
+                            </div>
+                            <div class="w-8 h-5 bg-white rounded flex items-center justify-center">
+                                <span class="text-xs font-bold text-orange-500">PP</span>
+                            </div>
+                            <div class="w-8 h-5 bg-white rounded flex items-center justify-center">
+                                <span class="text-xs font-bold text-gray-700">UPI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional Info -->
+                <div class="mt-6 text-center">
+                    <p class="text-gray4 text-xs">
+                        Velocity9 is an online education platform specializing in DevOps, AWS, Kubernetes, Docker and Cloud technologies. 
+                        All trademarks and logos are the property of their respective owners.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Performance Optimization Script -->
+    <script>
+        // Mobile Menu Functionality
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+        const openMenuButton = document.getElementById('open-menu');
+        const closeMenuButton = document.getElementById('close-menu');
+        
+        function openMobileMenu() {
+            mobileMenu.classList.add('open');
+            mobileOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            mobileOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+        
+        openMenuButton.addEventListener('click', openMobileMenu);
+        closeMenuButton.addEventListener('click', closeMobileMenu);
+        mobileOverlay.addEventListener('click', closeMobileMenu);
+        
+        // Close menu when clicking on a menu link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+        
+        // Simple script for smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    closeMobileMenu();
+                }
+            });
+        });
+        
+        // Blog Category Filtering
+        document.querySelectorAll('.category-filter').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.category-filter').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const category = this.getAttribute('data-category');
+                const blogPosts = document.querySelectorAll('.blog-card');
+                
+                if (category === 'all') {
+                    // Show all posts
+                    blogPosts.forEach(post => {
+                        post.style.display = 'block';
+                    });
+                } else {
+                    // Show only posts with matching category
+                    blogPosts.forEach(post => {
+                        const postCategories = post.getAttribute('data-category');
+                        if (postCategories.includes(category)) {
+                            post.style.display = 'block';
+                        } else {
+                            post.style.display = 'none';
+                        }
+                    });
+                }
+            });
+        });
+        
+        // Newsletter form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would typically send the form data to your server
+            alert('Thank you for subscribing to our newsletter!');
+            this.reset();
+        });
+        
+        // Track form submissions for analytics
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Here you would typically send data to Google Analytics
+                console.log('Button clicked:', this.textContent);
+            });
+        });
+        
+        // Lazy loading implementation for images
+        document.addEventListener('DOMContentLoaded', function() {
+            const lazyImages = [].slice.call(document.querySelectorAll('img.lazy'));
+            
+            if ('IntersectionObserver' in window) {
+                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.classList.remove('lazy');
+                            lazyImage.classList.add('loaded');
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+                
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
