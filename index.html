@@ -279,6 +279,175 @@
         img.lazy.loaded {
             opacity: 1;
         }
+
+               /* Add these styles to your existing CSS */
+        
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal-container {
+            background: white;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 450px;
+            padding: 2rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+        
+        .modal-overlay.active .modal-container {
+            transform: translateY(0);
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1E293B;
+        }
+        
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #64748B;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s ease;
+        }
+        
+        .close-modal:hover {
+            background-color: #F1F5F9;
+            color: #1E293B;
+        }
+        
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #374151;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #D1D5DB;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            box-sizing: border-box;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #2563EB;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 0.875rem 1.5rem;
+            background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-top: 0.5rem;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+        
+        .modal-text {
+            text-align: center;
+            color: #64748B;
+            margin-top: 1rem;
+            font-size: 0.875rem;
+        }
+        
+        .form-success {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        
+        .success-icon {
+            font-size: 3rem;
+            color: #10B981;
+            margin-bottom: 1rem;
+        }
+        
+        .success-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1E293B;
+            margin-bottom: 0.5rem;
+        }
+        
+        .success-text {
+            color: #64748B;
+            margin-bottom: 1.5rem;
+        }
+        
+        .success-btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        
+        .success-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body class="bg-light text-dark font-inter">
@@ -414,6 +583,66 @@
         </div>
     </section>
 
+<!--Modal form-->
+
+<section>
+            <div id="notes-modal" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 class="modal-title">Access Free Notes & Syllabus</h2>
+                <button class="close-modal" id="close-notes-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div id="form-content">
+                <p class="modal-text">Please provide your details to access our comprehensive DevOps & AWS study materials</p>
+                
+                <form id="notes-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" id="name" class="form-input" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" class="form-input" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" id="phone" class="form-input" placeholder="Enter your phone number" required>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Access Notes & Syllabus</button>
+                </form>
+            </div>
+
+           <div id="success-content" class="form-success" style="display: none;">
+    <div class="success-icon">
+        <i class="fas fa-check-circle"></i>
+    </div>
+    <h3 class="success-title">Thank You!</h3>
+    <p class="success-text">Your details have been submitted successfully. You now have access to our free DevOps & AWS notes and syllabus.</p>
+    
+    <div class="success-buttons" style="display: flex; flex-direction: column; gap: 10px;">
+        <a href="https://velocity9-dev.vercel.app/" target="_blank" class="success-btn" id="access-notes-btn">
+            <i class="fas fa-external-link-alt mr-2"></i>Access Notes Now
+        </a>
+        <a href="DevOps_Guide_2025.pdf" download="Velocity9_DevOps_Syllabus.pdf" class="success-btn" id="download-syllabus-btn" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%);">
+            <i class="fas fa-download mr-2"></i>Download Syllabus PDF
+        </a>
+    </div>
+    
+    <p style="margin-top: 15px; font-size: 0.8rem; color: #64748B;">
+        The notes page will open in a new tab. This modal will close automatically.
+    </p>
+</div>
+        </div>
+    </div>
+</section>
+
+ 
     <!-- Stats Section -->
     <section class="py-12 bg-white" aria-labelledby="stats-heading">
         <div class="container mx-auto px-4">
@@ -1051,5 +1280,123 @@
   window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
 </script>
 <script defer src="/_vercel/speed-insights/script.js"></script>
+
+ <script>
+        // Add this JavaScript to your existing script section
+        
+        // Modal functionality
+        const notesModal = document.getElementById('notes-modal');
+        const closeNotesModal = document.getElementById('close-notes-modal');
+        const notesForm = document.getElementById('notes-form');
+        const formContent = document.getElementById('form-content');
+        const successContent = document.getElementById('success-content');
+        
+        // Function to open the modal
+        function openNotesModal() {
+            notesModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        // Function to close the modal
+        function closeNotesModalFunc() {
+            notesModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        // Event listeners for opening the modal
+        document.querySelectorAll('a[href*="velocity9-dev.vercel.app"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                openNotesModal();
+            });
+        });
+        
+        // Close modal when clicking the close button
+        closeNotesModal.addEventListener('click', closeNotesModalFunc);
+        
+        // Close modal when clicking outside the modal content
+        notesModal.addEventListener('click', function(e) {
+            if (e.target === notesModal) {
+                closeNotesModalFunc();
+            }
+        });
+        
+        // Form submission
+        notesForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            
+            // Here you would typically send the data to your server
+            // For demonstration, we'll just show the success message
+            console.log('Form submitted:', { name, email, phone });
+            
+            // Show success message
+            formContent.style.display = 'none';
+            successContent.style.display = 'block';
+            
+            // You could also send this data to your analytics or backend
+            // Example: gtag('event', 'notes_access', { name, email, phone });
+        });
+
+        // Alternative: Auto-redirect after form submission
+notesForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    
+    // Validate form
+    if (!name || !email || !phone) {
+        alert('Please fill in all fields');
+        return;
+    }
+    
+    console.log('Notes form submitted:', { name, email, phone });
+    
+    // Send to analytics
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'notes_access', {
+            'event_category': 'engagement',
+            'event_label': 'free_notes_access'
+        });
+    }
+    
+    // Close modal and redirect to notes
+    closeNotesModalFunc();
+    resetModal();
+    
+    // Open notes in new tab
+    window.open('https://velocity9-dev.vercel.app/', '_blank');
+    
+    // Also trigger syllabus download
+    const downloadLink = document.createElement('a');
+    downloadLink.href = 'DevOps_Guide_2025.pdf';
+    downloadLink.download = 'Velocity9_DevOps_Syllabus.pdf';
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+});
+        
+        // Reset form when modal is closed and reopened
+        function resetModal() {
+            formContent.style.display = 'block';
+            successContent.style.display = 'none';
+            notesForm.reset();
+        }
+        
+        // Reset modal when it's closed
+        closeNotesModal.addEventListener('click', resetModal);
+        notesModal.addEventListener('click', function(e) {
+            if (e.target === notesModal) {
+                resetModal();
+            }
+        });
+    </script>
 </body>
 </html>
