@@ -1444,47 +1444,8 @@
     
     // ========== TEST FUNCTION ==========
     // Add this test button to debug SheetDB
-    function testSheetDB() {
-        const testData = {
-            name: "Test User",
-            email: "test@example.com",
-            mobile: "+919876543210",
-            date: new Date().toLocaleString()
-        };
-        
-        console.log('Testing SheetDB with:', testData);
-        
-        fetch(SHEETDB_API, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                data: testData
-            })
-        })
-        .then(response => {
-            console.log('Response Status:', response.status);
-            return response.json();
-        })
-        .then(data => {
-            console.log('Response Data:', data);
-            alert('Test successful! Check console for details.');
-        })
-        .catch(error => {
-            console.error('Test failed:', error);
-            alert('Test failed. Check console for error.');
-        });
-    }
-    
-    // Add test button (remove in production)
-    document.addEventListener('DOMContentLoaded', function() {
-        const testBtn = document.createElement('button');
-        testBtn.textContent = 'Test SheetDB';
-        testBtn.style.cssText = 'position:fixed;bottom:20px;right:20px;z-index:9999;background:#f00;color:#fff;padding:10px;border:none;border-radius:5px;cursor:pointer;';
-        testBtn.onclick = testSheetDB;
-        document.body.appendChild(testBtn);
-    });
+
+
     
     // Lazy loading for images
     document.addEventListener('DOMContentLoaded', function() {
