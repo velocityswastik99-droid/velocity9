@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevOps & AWS Mastery Courses | Velocity9 DevOps Hub - Get Certified & Land Your Dream Job</title>
-    <meta name="description" content="Master DevOps & AWS with Velocity9's comprehensive courses. Learn Kubernetes, Docker, CI/CD, Terraform, Jenkins and cloud computing. Get certified, build real projects, and land your dream job with career support. Enroll now at ₹2,999.">
+    <meta name="description" content="Master DevOps & AWS with Velocity9's comprehensive courses. Learn Kubernetes, Docker, CI/CD, Terraform, Jenkins and cloud computing. Get certified, build real projects, and land your dream job with career support. Enroll now at ₹9,999.">
     <meta name="keywords" content="DevOps course, AWS training, cloud computing, Kubernetes, Docker, CI/CD, Terraform, Jenkins, DevOps certification, AWS certification, online IT courses, career transformation, Velocity9">
     <meta name="author" content="Velocity9">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563EB">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="application-name" content="Velocity9 DevOps Hub">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="DevOps & AWS Mastery Courses | Velocity9 DevOps Hub">
@@ -17,6 +20,8 @@
     <meta property="og:url" content="https://velocity9.com">
     <meta property="og:image" content="https://velocity9.com/images/og-image.jpg">
     <meta property="og:site_name" content="Velocity9">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:image:alt" content="Velocity9 DevOps & AWS Courses">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
@@ -24,6 +29,8 @@
     <meta name="twitter:description" content="Master DevOps & AWS with comprehensive courses. Learn Kubernetes, Docker, CI/CD and cloud tools. Get certified and land your dream job.">
     <meta name="twitter:image" content="https://velocity9.com/images/twitter-card.jpg">
     <meta name="twitter:site" content="@velocity9">
+    <meta name="twitter:creator" content="@velocity9">
+    <meta name="twitter:image:alt" content="Velocity9 DevOps & AWS Courses">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://velocity9.com">
@@ -37,6 +44,7 @@
     
     <!-- Preload Critical Resources -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     
     <!-- Performance Optimizations -->
@@ -96,7 +104,7 @@
         },
         "offers": {
             "@type": "Offer",
-            "price": "3999",
+            "price": "9999",
             "priceCurrency": "INR"
         },
         "hasCourseInstance": {
@@ -120,7 +128,7 @@
         },
         "offers": {
             "@type": "Offer",
-            "price": "3999",
+            "price": "9999",
             "priceCurrency": "INR"
         },
         "hasCourseInstance": {
@@ -130,9 +138,24 @@
         }
     }
     </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Velocity9 DevOps Hub",
+        "url": "https://velocity9.com",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Velocity9"
+        },
+        "inLanguage": "en-IN"
+    }
+    </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
@@ -152,7 +175,8 @@
                         gray6: '#475569'
                     },
                     fontFamily: {
-                        'inter': ['Inter', 'sans-serif']
+                        'inter': ['Inter', 'sans-serif'],
+                        'display': ['Space Grotesk', 'sans-serif']
                     },
                     animation: {
                         'fade-in': 'fadeIn 0.8s ease-in-out',
@@ -181,20 +205,31 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #F6F8FB;
+            background-image:
+                radial-gradient(1200px 600px at 10% -10%, rgba(37, 99, 235, 0.12), transparent 60%),
+                radial-gradient(900px 500px at 90% 0%, rgba(14, 165, 233, 0.12), transparent 55%),
+                linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 100%);
+            background-attachment: fixed;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: -0.02em;
         }
         .gradient-bg {
-            background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
+            background: linear-gradient(135deg, #1D4ED8 0%, #2563EB 40%, #0EA5E9 100%);
         }
         .accent-gradient {
             background: linear-gradient(135deg, #DC2626, #B91C1C);
         }
         .section-divider {
             height: 1px;
-            background: linear-gradient(90deg, transparent, #E2E8F0, transparent);
+            background: linear-gradient(90deg, transparent, #CBD5E1, transparent);
         }
         .course-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border: 1px solid #E2E8F0;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
         }
         .course-card:hover {
             transform: translateY(-8px);
@@ -209,13 +244,18 @@
         .pricing-card {
             transition: all 0.3s ease;
             border: 1px solid #E2E8F0;
+            box-shadow: 0 25px 60px -40px rgba(30, 64, 175, 0.6);
         }
         .pricing-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
         }
         .stats-card {
-            background: linear-gradient(135deg, #2563EB, #1E40AF);
+            background: linear-gradient(135deg, #1D4ED8, #0EA5E9);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .hero-glow {
+            box-shadow: 0 30px 80px -50px rgba(14, 165, 233, 0.8);
         }
         .nav-link {
             position: relative;
@@ -555,7 +595,7 @@
             </div>
             <div class="md:w-1/2 flex justify-center animate-slide-up">
                 <div class="relative w-full max-w-lg">
-                    <div class="relative z-10 rounded-xl overflow-hidden shadow-2xl border-4 border-white/30">
+                    <div class="relative z-10 rounded-xl overflow-hidden shadow-2xl border-4 border-white/30 hero-glow">
                         <div class="h-80 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
                             <div class="text-center p-8">
                                 <i class="fas fa-cloud text-6xl mb-4 text-white" aria-hidden="true"></i>
@@ -629,7 +669,7 @@
                                 <div class="text-right">
                                     <span class="text-3xl font-bold text-primary" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                                         <meta itemprop="priceCurrency" content="INR">
-                                        <span itemprop="price">₹3,999</span>
+                                        <span itemprop="price">₹9,999</span>
                                     </span>
                                     <p class="text-gray5 text-sm">One-time payment</p>
                                 </div>
@@ -689,7 +729,7 @@
                                 <div class="text-right">
                                     <span class="text-3xl font-bold text-primary" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                                         <meta itemprop="priceCurrency" content="INR">
-                                        <span itemprop="price">₹3,999</span>
+                                        <span itemprop="price">₹9,999</span>
                                     </span>
                                     <p class="text-gray5 text-sm">One-time payment</p>
                                 </div>
@@ -903,7 +943,7 @@
                         <div class="p-8">
                             <div class="text-center mb-8">
                                 <div class="flex justify-center items-baseline">
-                                    <span class="text-5xl font-bold text-primary">₹3,999</span>
+                                    <span class="text-5xl font-bold text-primary">₹9,999</span>
                                     <span class="text-gray5 ml-2 text-xl">one-time</span>
                                 </div>
                                 <p class="text-gray5 mt-2">No hidden fees, no monthly subscriptions</p>
@@ -956,7 +996,7 @@
                             
                             <div class="text-center">
                                 <button class="px-10 py-4 gradient-bg text-white text-xl font-bold rounded-lg hover:shadow-xl transition">
-                                    Enroll Now at ₹3,999
+                                    Enroll Now at ₹9,999
                                 </button>
                                 <p class="text-gray5 mt-4">30-day money-back guarantee • No questions asked</p>
                             </div>
